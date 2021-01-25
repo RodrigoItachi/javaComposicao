@@ -55,12 +55,31 @@ public class Order {
 	public void removeItem(OrderItem item) {
 		this.items.remove(item);
 	}
-	
+
 	public Double total() {
 		Double sum = 0.0;
 		for (OrderItem orderItem : items) {
 			sum += orderItem.subTotal();
 		}
 		return sum;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+
+		builder.append("Data Order\n");
+		builder.append("---------------------------------\n");
+		builder.append("Order date moment: ");
+		builder.append("(" + dateFormat.format(moment) + ")\n");
+		builder.append("Status - ");
+		builder.append(this.status + "\n");
+		builder.append(client + "\n");
+		for (OrderItem orderItem : items) {
+			builder.append(orderItem + "\n");
+		}
+		builder.append("Total: ");
+		builder.append(total() + "\n");
+		return builder.toString();
 	}
 }
