@@ -31,14 +31,14 @@ public class Product {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Data product: ");
-		builder.append("--------------------------------- ");
+		builder.append("Data product: \n");
+		builder.append("---------------------------------\n");
 
 		builder.append("Name: ");
-		builder.append(this.getName());
+		builder.append(this.getName() + "\n");
 
 		builder.append("Price: ");
-		builder.append(this.getPrice());
+		builder.append(this.getPrice() + "\n");
 		return builder.toString();
 	}
 }
