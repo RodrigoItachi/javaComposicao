@@ -1,7 +1,9 @@
 package javaComposicao.model.entities;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javaComposicao.model.enuns.OrderStatus;
 
@@ -11,6 +13,7 @@ public class Order {
 	private OrderStatus status;
 
 	private Client client;
+	private List<OrderItem> items = new ArrayList<>();
 
 	public Order() {
 	}
@@ -44,5 +47,14 @@ public class Order {
 	public void setClient(Client client) {
 		this.client = client;
 	}
+
+	public void addItem(OrderItem item) {
+		this.items.add(item);
+	}
+
+	public void removeItem(OrderItem item) {
+		this.items.remove(item);
+	}
+	
 
 }
