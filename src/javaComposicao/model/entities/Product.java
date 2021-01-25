@@ -7,7 +7,7 @@ public class Product {
 	public Product() {
 	}
 
-	public Product(String name, Double price) {
+	public Product(String productName, Double price) {
 		setName(name);
 		setPrice(price);
 	}
