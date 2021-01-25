@@ -10,7 +10,15 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;
 
+	private Client client;
+
 	public Order() {
+	}
+
+	public Order(Date moment, OrderStatus status, Client client) {
+		setMoment(moment);
+		setStatus(status);
+		setClient(client);
 	}
 
 	public Date getMoment() {
@@ -27,6 +35,14 @@ public class Order {
 
 	public void setStatus(OrderStatus status) {
 		this.status = status;
+	}
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 }
