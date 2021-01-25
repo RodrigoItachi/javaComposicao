@@ -32,4 +32,21 @@ public class OrderItem {
 		return this.quantity * this.product.getPrice();
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("---------------------------------\n");
+		builder.append("Data Order Item: \n");
+		builder.append("---------------------------------\n");
+		builder.append("Product name: ");
+		builder.append(this.product.getName() + "\n");
+		builder.append("Product price: ");
+		builder.append(this.product.getPrice() + "\n");
+		builder.append("Quantity: ");
+		builder.append(this.getQuantity() + "\n");
+		builder.append("Subtotal: ");
+		builder.append(this.subTotal() + "\n");
+		return builder.toString();
+	}
+
 }
