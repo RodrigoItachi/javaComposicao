@@ -38,6 +38,10 @@ public class Teste {
 		
 		System.out.print("How many items to this order? ");
 		int n = leia.nextInt();
+		
+		for (int i = 1; i <= n; i++) {
+
+		}
 		leia.close();
 	}
 
