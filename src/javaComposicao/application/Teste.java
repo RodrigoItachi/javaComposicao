@@ -33,14 +33,21 @@ public class Teste {
 		System.out.println("Enter order data: ");
 		System.out.print("Status: ");
 		OrderStatus status = OrderStatus.valueOf(leia.next().toUpperCase().trim());
-		
+
 		Order order = new Order(new Date(), status, new Client(name, email, birthDate));
-		
+
 		System.out.print("How many items to this order? ");
 		int n = leia.nextInt();
-		
-		for (int i = 1; i <= n; i++) {
 
+		for (int i = 1; i <= n; i++) {
+			System.out.println("Enter #" + i + " item data: ");
+			leia.nextLine();
+			System.out.print("Product name: ");
+			String productName = leia.nextLine();
+			System.out.print("Price name: ");
+			Double price = leia.nextDouble();
+			System.out.print("Quantity: ");
+			Integer quantity = leia.nextInt();
 		}
 		leia.close();
 	}
