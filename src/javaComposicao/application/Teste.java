@@ -35,6 +35,9 @@ public class Teste {
 		OrderStatus status = OrderStatus.valueOf(leia.next().toUpperCase().trim());
 		
 		Order order = new Order(new Date(), status, new Client(name, email, birthDate));
+		
+		System.out.print("How many items to this order? ");
+		int n = leia.nextInt();
 		leia.close();
 	}
 
