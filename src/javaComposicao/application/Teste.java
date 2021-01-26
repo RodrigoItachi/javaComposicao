@@ -33,6 +33,8 @@ public class Teste {
 		System.out.println("Enter order data: ");
 		System.out.print("Status: ");
 		OrderStatus status = OrderStatus.valueOf(leia.next().toUpperCase().trim());
+		
+		Order order = new Order(new Date(), status, new Client(name, email, birthDate));
 		leia.close();
 	}
 
