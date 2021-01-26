@@ -48,10 +48,11 @@ public class Teste {
 			Double price = leia.nextDouble();
 			System.out.print("Quantity: ");
 			Integer quantity = leia.nextInt();
-			
+
 			OrderItem item = new OrderItem(quantity, new Product(productName, price));
 			order.addItem(item);
 		}
+		System.out.println(order);
 		leia.close();
 	}
 
