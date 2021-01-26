@@ -19,17 +19,21 @@ public class Teste {
 		Scanner leia = new Scanner(System.in);
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		
+
 		System.out.println("Enter cliente data: ");
 		System.out.print("Name: ");
 		String name = leia.nextLine().trim();
 
 		System.out.print("Email: ");
 		String email = leia.next().trim();
-		
+
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		Date birthDate = dateFormat.parse(leia.next().trim());
-		leia.close();
+
+		System.out.println("Enter order data: ");
+		System.out.print("Status: ");
+		OrderStatus status = OrderStatus.valueOf(leia.next().toUpperCase().trim());
+		
 	}
 
 }
