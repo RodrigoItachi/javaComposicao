@@ -18,8 +18,17 @@ public class Teste {
 		Locale.setDefault(Locale.US);
 		Scanner leia = new Scanner(System.in);
 
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		
+		System.out.println("Enter cliente data: ");
+		System.out.print("Name: ");
+		String name = leia.nextLine().trim();
 
+		System.out.print("Email: ");
+		String email = leia.next().trim();
+		
+		System.out.print("Birth date (DD/MM/YYYY): ");
+		Date birthDate = dateFormat.parse(leia.next().trim());
 		leia.close();
 	}
 
