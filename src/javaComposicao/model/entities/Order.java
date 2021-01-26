@@ -78,7 +78,7 @@ public class Order {
 		for (OrderItem orderItem : items) {
 			builder.append(orderItem + "\n");
 		}
-		builder.append("Total: ");
+		builder.append("TOTAL: ");
 		builder.append(total() + "\n");
 		return builder.toString();
 	}
