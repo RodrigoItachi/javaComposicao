@@ -50,6 +50,7 @@ public class Teste {
 			Integer quantity = leia.nextInt();
 			
 			OrderItem item = new OrderItem(quantity, new Product(productName, price));
+			order.addItem(item);
 		}
 		leia.close();
 	}
